@@ -1,11 +1,10 @@
-# 🎙️ Cyber-Voice: Autonomous AI Outreach & Scheduling Agent
+# 🎙️ Real-Estate AI Outreach & Scheduling Agent
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![LiveKit Agents](https://img.shields.io/badge/LiveKit-Agents%201.8.0-002B49?logo=livekit&logoColor=white)](https://livekit.io/)
 [![Groq LPU](https://img.shields.io/badge/Groq-LPU%20Inference-F55036?logo=groq&logoColor=white)](https://groq.com/)
 [![Deepgram Nova-2](https://img.shields.io/badge/Deepgram-Nova--2%20STT-13EF93?logo=deepgram&logoColor=black)](https://deepgram.com/)
 [![Cartesia Sonic 3](https://img.shields.io/badge/Cartesia-Sonic%203%20TTS-7B2BF9)](https://cartesia.ai/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An ultra-low latency (<300ms), bi-directional conversational voice AI agent engineered for real estate marketing audits and automated appointment setting. Built with **LiveKit Agents v1.8.0**, powered by **Groq LPU LLM inference**, **Deepgram Nova-2 STT**, and modular TTS engines (**Cartesia Sonic 3**, **ElevenLabs Flash v2.5**, and **Deepgram Aura**).
 
@@ -16,7 +15,6 @@ An ultra-low latency (<300ms), bi-directional conversational voice AI agent engi
 - [Architecture & Data Pipeline](#architecture-data-pipeline)
 - [Platform Evaluation & Benchmark Matrix](#platform-evaluation)
 - [Performance & Engineering Milestones](#performance-engineering-milestones)
-- [OSC Sales Framework & Conversation Flow](#osc-sales-framework)
 - [Prerequisites & Windows Environment Fixes](#prerequisites-windows-fixes)
 - [Package Manifest & One-Line Installation](#package-manifest)
 - [Environment Configuration (.env)](#environment-configuration)
@@ -39,7 +37,6 @@ An ultra-low latency (<300ms), bi-directional conversational voice AI agent engi
 
 Key system capabilities include:
 - **Sub-300ms End-to-End Latency:** Time-to-first-audio optimized across VAD, STT, LLM streaming, and TTS synthesis.
-- **Resilient Objection Handling:** Incorporates the Outbound Sales Handbook (OSC) framework to reframe "Not interested" or "I'm busy" brushes without surrendering.
 - **Asynchronous Data Pipelines:** Non-blocking `aiohttp` webhooks ensure zero audio stuttering during database sync.
 - **Multi-Engine Voice Flexibility:** Easily hot-swap TTS engines between Cartesia Sonic 3, ElevenLabs, and Deepgram Aura.
 
@@ -105,17 +102,16 @@ During architectural exploration, both proprietary CPaaS platforms and open-sour
 
 ---
 
-<a id="osc-sales-framework"></a>
-## 🎯 OSC Sales Framework & Conversation Flow
+<a id="sales-framework"></a>
+## 🎯 Framework & Conversation Flow
 
-The agent ("Sarah") is built on the **OSC Outbound Sales Handbook** for B2B real estate agency outreach:
+The agent ("Sarah") is built for B2B real estate agency outreach:
 
 1. **Permission-Based Hook:** Asks for 20 seconds regarding the agent's active listing.
 2. **Showing Bottleneck Discovery:** Discovers what time the real estate agent finishes client showings in the evening before offering Zoom slots.
 3. **Choice of Two Close:** Offers specific times ("Tomorrow at 6:00 PM, or Thursday at 8:30 AM").
 4. **Spoken Email Normalization:** Parses spoken emails (e.g., `"john at gmail dot com"`) directly into clean string formats (`"john@gmail.com"`).
-5. **Solidification (4-Point Lock & Smart Bypass):** Provides confirmation code `COMPASS10`. If the prospect says they don't have a pen, Sarah intelligently bypasses the read-back and confirms via email.
-6. **The 2-Goodbye Defense:** Ignores early casual brush-off goodbyes ("Okay thanks bye") with a soft value pivot, only ending the session when the appointment is locked or on a second explicit refusal.
+5. **The 2-Goodbye Defense:** Ignores early casual brush-off goodbyes ("Okay thanks bye") with a soft value pivot, only ending the session when the appointment is locked or on a second explicit refusal.
 
 ---
 
