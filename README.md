@@ -530,9 +530,10 @@ function doPost(e) {
 
 ---
 ## 🎥 Demo
+> 🔊 **Sound On:** Please unmute the video to hear the live voice assistant in action.
 
-[🎥 Click here to watch the Demo](https://github.com/user-attachments/assets/525952e8-1f2c-48db-acf7-1d755fa07c27)
-
+<video src="https://github.com/user-attachments/assets/525952e8-1f2c-48db-acf7-1d755fa07c27" autoplay muted loop controls width="100%">
+</video>
 
 
 <a id="future-roadmap"></a>
