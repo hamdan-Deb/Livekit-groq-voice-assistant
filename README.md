@@ -532,8 +532,7 @@ function doPost(e) {
 ## 🎥 Demo
 > 🔊 **Sound On:** Please unmute the video to hear the live voice assistant in action.
 
-[![Watch Voice Assistant Demo](https://res.cloudinary.com/dk8s4wct/image/upload/v1790090673/demoThumb.jpg)](https://github.com/user-attachments/assets/525952e8-1f2c-48db-acf7-1d755fa07c27)
-
+[![Watch Voice Assistant Demo](https://res.cloudinary.com/dk8s4wct/image/upload/v1790090673/demoThumb.jpg?v=2)](https://github.com/user-attachments/assets/525952e8-1f2c-48db-acf7-1d755fa07c27)
 
 
 <a id="future-roadmap"></a>
